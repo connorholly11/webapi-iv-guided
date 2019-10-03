@@ -1,5 +1,9 @@
-const server = require('./api/server.js');
+require("dotenv").config();
+const server = require("./api/server.js");
+const defaults = require("./api/configs/defaults");
 
-server.listen(4000, () => {
-  console.log('\n*** Server Running on http://localhost:4000 ***\n');
+server.listen(defaults.port, () => {
+  console.log(
+    `\n*** Server Running on http://localhost:${defaults.port} ***\n`
+  );
 });
